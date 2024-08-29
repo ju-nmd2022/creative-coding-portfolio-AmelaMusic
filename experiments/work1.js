@@ -3,11 +3,12 @@ function setup() {
   background(255);
   strokeWeight(1);
   drawLines();
+  drawAngledLines();
   noLoop();
 }
 
 function drawLines() {
-  const numberOfLines = 15;
+  const numberOfLines = 20;
   const lineSpacing = height / (numberOfLines + 1);
   const lineLength = 200;
 
@@ -23,6 +24,26 @@ function drawLines() {
     }
 
     line(startX, y, endX, y);
+  }
+}
+
+function drawAngledLines() {
+  const numberOfAngledLines = 30;
+
+  for (let i = 0; i < numberOfAngledLines; i++) {
+    let y = (i + 1) * (height / (numberOfAngledLines + 1));
+
+    let startX = random(100, 900);
+
+    let lineLength = random(20, 150);
+
+    let angle = radians(random(10, 60));
+
+    // Calculate the end point using trigonometry (source chatgpt)
+    let endX = startX + cos(angle) * lineLength;
+    let endY = y - sin(angle) * lineLength; // Subtract to angle upwards
+
+    line(startX, y, endX, endY);
   }
 }
 
