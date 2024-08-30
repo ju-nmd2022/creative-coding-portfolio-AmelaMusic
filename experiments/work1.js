@@ -10,11 +10,11 @@ function setup() {
 function drawLines() {
   const numberOfLines = 20;
   const lineSpacing = height / (numberOfLines + 1);
-  const lineLength = 200;
 
   for (let i = 0; i < numberOfLines; i++) {
     let y = (i + 1) * lineSpacing;
-
+    
+    // ad offset (source chatgpt line 18,19,20)
     let offset = random(-60, 60);
     let startX = 100 + offset;
     let endX = 900 + offset;
@@ -39,7 +39,7 @@ function drawAngledLines() {
 
     let angle = radians(random(10, 60));
 
-    // Calculate the end point using trigonometry (source chatgpt)
+    // Calculate the end point using trigonometry (line 42 and 43 source chatgpt)
     let endX = startX + cos(angle) * lineLength;
     let endY = y - sin(angle) * lineLength; // Subtract to angle upwards
 
