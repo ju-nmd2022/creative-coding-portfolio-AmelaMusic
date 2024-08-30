@@ -14,7 +14,6 @@ function drawCircularGrid() {
     const maxRectSize = 15;  
   
     strokeWeight(1);  
-    fill(0) 
 
     for (let i = 0; i < numberOfRectangles; i++) {
         // Random angle and radius for the center of each rectangle (source chatgpt line 21,22,25,26)
@@ -27,6 +26,9 @@ function drawCircularGrid() {
     
         let rectWidth = random(minRectSize, maxRectSize);
         let rectHeight = random(minRectSize, maxRectSize);
+
+        let randomColor = color(random(255), random(255), random(255));
+        fill(randomColor);    
     
         rect(x1, y1, rectWidth, rectHeight);
       }
