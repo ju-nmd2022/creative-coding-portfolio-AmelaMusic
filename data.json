@@ -23,5 +23,15 @@
     "file": "experiments/work2.js",
     "name": "Michael Noll art recreation",
     "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+  {
+    "file": "experiments/work2FirstVariation.js",
+    "name": "Michael Noll first variation",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+  },
+  {
+    "file": "experiments/work2SecondVariation.js",
+    "name": "Michael Noll second variation",
+    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
   }
 ]
