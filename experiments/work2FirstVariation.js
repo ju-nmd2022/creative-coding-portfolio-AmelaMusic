@@ -1,7 +1,10 @@
 function setup() {
     createCanvas(1000,600);
+    frameRate(3);
+}
+
+function draw() {
     background(255);
-    noLoop();  
     drawCircularGrid();
 }
 

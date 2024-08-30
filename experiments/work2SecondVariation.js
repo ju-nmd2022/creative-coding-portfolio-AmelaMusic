@@ -8,13 +8,12 @@ function setup() {
 function drawCircularGrid() {
     const centerX = width / 2;
     const centerY = height / 2;
-    const circleRadius = 250; 
+    const circleRadius = 100; 
     const numberOfRectangles = 400; 
     const minRectSize = 2;   
     const maxRectSize = 15;  
   
     strokeWeight(1);  
-    fill(0) 
 
     for (let i = 0; i < numberOfRectangles; i++) {
         // Random angle and radius for the center of each rectangle (source chatgpt line 21,22,25,26)
