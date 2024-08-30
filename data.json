@@ -1,37 +1,32 @@
 [
   {
-    "file": "experiments/example.js",
-    "name": "Name of your experiment",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
-  },
-  {
     "file": "experiments/work1.js",
     "name": "Vera Molnar art recreation",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This project is an attempt to recreate Vera Molnars art"
   },
   {
     "file": "experiments/work1FirstVariation.js",
     "name": "Vera Molnar art first variation",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This project is a variation of the Vera Molnar art, changing the color and trying out adding a grid, making it look like grid paper"
   },
   {
     "file": "experiments/work1SecondVariation.js",
     "name": "Vera Molnar art second variation",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This projet is the second variation of the Vera Molnar art. Trying different things like changing the colors and removing noloop to get the blinking effect"
   },
   {
     "file": "experiments/work2.js",
     "name": "Michael Noll art recreation",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This project is an attempt to recreate Michael Nolls art"
   },
   {
     "file": "experiments/work2FirstVariation.js",
     "name": "Michael Noll first variation",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This project is a variation of the Michael Noll art, changing the colors as well as adding a looping effect"
   },
   {
     "file": "experiments/work2SecondVariation.js",
     "name": "Michael Noll second variation",
-    "description": "Explains the what and the why. What is the main idea? What is the purpose? Describes the coding process and implementation choices and gives a high level system overview."
+    "description": "This projet is the second variation of the Michael Noll art. Resizing the circle radius and remvoing the fill"
   }
 ]
