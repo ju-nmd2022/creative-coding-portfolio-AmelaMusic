@@ -32,6 +32,16 @@
   {
     "file": "experiments/work3.js",
     "name": "Michael Noll complex recreation",
-    "description": ""
+    "description": "This project is a recreation of Michael Nolls art by adding a flow field as the background"
+  },
+  {
+    "file": "experiments/work3FirstVariation.js",
+    "name": "Michael Noll complex recreation first variation",
+    "description": "This project is the first variation of the complex Michael Noll version"
+  },
+  {
+    "file": "experiments/work3SecondVariation.js",
+    "name": "Michael Noll complex recreation second variation",
+    "description": "This project is the second variation of the complex Michael Noll version"
   }
 ]
