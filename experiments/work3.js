@@ -6,6 +6,7 @@ function setup() {
   function draw() {
     background(255); 
     drawFlowField();
+    drawGridBackground();
     drawCircularGrid(); 
   }
   
@@ -26,7 +27,7 @@ function setup() {
           rotate(value);
           strokeWeight(4);
 
-          //draw curve instead of arrow
+          //draw curve instead of arrow (source chatgpt)
           beginShape();
           const startX = -curveLength;
           const startY = 0;
@@ -37,7 +38,7 @@ function setup() {
           const endX = curveLength;
           const endY = 0;
     
-          // Use bezier curve to create a smooth curve
+          // bezier curve to create a smooth curve
           bezier(startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY);
     
           endShape();
@@ -45,6 +46,17 @@ function setup() {
           pop();
       }
     }
+  }
+
+  // draw white background for the circular grid
+  function drawGridBackground() {
+    const centerX = width / 2;
+    const centerY = height / 2;
+    const gridRadius = 250; 
+    
+    fill(255); 
+    noStroke();
+    ellipse(centerX, centerY, gridRadius * 2); 
   }
   
   function drawCircularGrid() {
