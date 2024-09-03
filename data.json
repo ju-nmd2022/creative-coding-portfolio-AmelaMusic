@@ -28,5 +28,10 @@
     "file": "experiments/work2SecondVariation.js",
     "name": "Michael Noll second variation",
     "description": "This projet is the second variation of the Michael Noll art. Resizing the circle radius and remvoing the fill"
+  },
+  {
+    "file": "experiments/work3.js",
+    "name": "Michael Noll complex recreation",
+    "description": ""
   }
 ]
