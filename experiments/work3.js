@@ -11,6 +11,7 @@ function setup() {
   }
   
   function drawFlowField() {
+    // (source garrit lecture slide example)
     const fieldSize = 50; 
     const fieldSizeHalf = fieldSize / 2;
     const maxCols = Math.ceil(width / fieldSize);
