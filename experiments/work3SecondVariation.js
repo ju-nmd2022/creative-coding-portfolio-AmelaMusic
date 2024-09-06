@@ -20,7 +20,7 @@ function setup() {
   
     for (let x = 0; x < maxCols; x++) {
         for (let y = 0; y < maxRows; y++) {
-          const padding = 10;
+          const padding = 5;
           const value = noise(x / divider, y / divider) * Math.PI * 2;
           const curveLength = fieldSizeHalf - padding; 
           push();
@@ -29,21 +29,23 @@ function setup() {
           strokeWeight(4);
 
           //draw curve instead of arrow (source chatgpt)
-          beginShape();
-          const startX = -curveLength;
-          const startY = 0;
-          const controlX1 = -curveLength / 2;
-          const controlY1 = random(-curveLength, curveLength); 
-          const controlX2 = curveLength / 2;
-          const controlY2 = random(-curveLength, curveLength); 
-          const endX = curveLength;
-          const endY = 0;
-    
-          // bezier curve to create a smooth curve
-          bezier(startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY);
-    
-          endShape();
-  
+          for (let i=0; i < 5; i++) {
+            const offset = i * 5;
+            beginShape();
+            const startX = -curveLength + offset;
+            const startY = 0;
+            const controlX1 = -curveLength / 2 + offset;
+            const controlY1 = random(-curveLength, curveLength); 
+            const controlX2 = curveLength / 2 + offset;
+            const controlY2 = random(-curveLength, curveLength); 
+            const endX = curveLength + offset;
+            const endY = 0;
+      
+            // bezier curve to create a smooth curve
+            bezier(startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY);
+      
+            endShape();
+          }
           pop();
       }
     }
