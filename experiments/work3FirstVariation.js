@@ -9,7 +9,9 @@ function setup() {
     drawGridBackground();
     drawCircularGrid(); 
   }
-  
+
+  const noiseScale = 0.09;  
+
   function drawFlowField() {
     // (source garrit lecture slide example)
     const fieldSize = 50; 
@@ -26,7 +28,12 @@ function setup() {
           push();
           translate(x * fieldSize + fieldSizeHalf, y * fieldSize + fieldSizeHalf);
           rotate(value);
-          strokeWeight(4);
+
+        
+        // Noise-based color and stroke weight (source chatgpt)
+         const colorValue = noise(x * noiseScale, y * noiseScale) * 255;
+         stroke(colorValue, 100, 255 - colorValue, 150);  // apply alpha transparency
+         strokeWeight(2 + noise(x * noiseScale, y * noiseScale) * 5);  // stroke weight based on noise
 
           //draw curve instead of arrow (source chatgpt)
           beginShape();
