@@ -37,11 +37,11 @@
   {
     "file": "experiments/work3FirstVariation.js",
     "name": "Michael Noll complex recreation first variation",
-    "description": "This project is the first variation of the complex Michael Noll version"
+    "description": "This project is the first variation of the complex Michael Noll version using noise based color and stroke weight"
   },
   {
     "file": "experiments/work3SecondVariation.js",
     "name": "Michael Noll complex recreation second variation",
-    "description": "This project is the second variation of the complex Michael Noll version"
+    "description": "This project is the second variation of the complex Michael Noll version using repitition"
   }
 ]
