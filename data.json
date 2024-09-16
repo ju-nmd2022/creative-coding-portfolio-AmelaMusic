@@ -43,5 +43,10 @@
     "file": "experiments/work3SecondVariation.js",
     "name": "Michael Noll complex recreation second variation",
     "description": "This project is the second variation of the complex Michael Noll version using repitition"
+  },
+  {
+    "file": "experiments/work3ThirdVariation.js",
+    "name": "Michael Noll complex recreation third variation",
+    "description": "This project is the third variation of the complex Michael Noll version using  "
   }
 ]
