@@ -32,7 +32,7 @@ function drawFlowField() {
             push();
             translate(x * fieldSize + fieldSizeHalf + noiseOffsetX, y * fieldSize + fieldSizeHalf + noiseOffsetY);
             rotate(value);
-            strokeWeight(2);
+            strokeWeight(4);
             stroke(0);
 
             //draw curve instead of arrow (source chatgpt)
