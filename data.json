@@ -50,7 +50,7 @@
     "description": "This project is the third variation of the complex Michael Noll version drawing only the flow field with Perlin noise-based movement"
   },
   {
-    "file": "experiments/work3ThirdVariation.js",
+    "file": "experiments/work3FourthVariation.js",
     "name": "Michael Noll complex recreation fourth variation",
     "description": "This project is the fourth variation of the complex Michael Noll version trying more experimentall things"
   }
