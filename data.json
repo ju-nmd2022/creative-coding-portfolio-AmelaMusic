@@ -52,11 +52,11 @@
   {
     "file": "experiments/work3FourthVariation.js",
     "name": "Michael Noll complex recreation fourth variation",
-    "description": "This project is the fourth variation of the complex Michael Noll version trying more experimentall things"
+    "description": "This project is the fourth variation of the complex Michael Noll version trying more experimentall things, clicking the screen will loop and unloop the art"
   },
   {
     "file": "experiments/work4Sound.js",
     "name": "Michael Noll sound experiment",
-    "description": ""
+    "description": "This project is recreating Michael Nolls art using sound. Clicking the screen will start drawing one rectangle at a time and playing a sound for each one. The sound is based on the distance from the center and the size of the rectangle. Larger rectangles produces higher frequencies and rectnagles closer to the center produce louder sounds"
   }
 ]
