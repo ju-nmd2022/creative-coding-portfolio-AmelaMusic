@@ -88,7 +88,7 @@ function drawRectanglesSequentially() {
     rectangleIndex++;
     
     // Schedule the next rectangle to be drawn after a delay
-    timeoutID = setTimeout(drawRectanglesSequentially, 400);
+    timeoutID = setTimeout(drawRectanglesSequentially, 200);
   }
 }
 
