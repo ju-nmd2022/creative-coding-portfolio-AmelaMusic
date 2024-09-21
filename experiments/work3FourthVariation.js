@@ -9,12 +9,14 @@ function setup() {
 function draw() {
     background(255); 
     drawFlowField(); 
+    drawFlowField2(); // New flow field
     drawGridBackground();
     drawInteractiveRectangles();
 }
 
+// First flow field 
 function drawFlowField() {
-     // (source garrit lecture slide example)
+    // (source garrit lecture slide example)
     const fieldSize = 50; 
     const fieldSizeHalf = fieldSize / 2;
     const maxCols = Math.ceil(width / fieldSize);
@@ -34,7 +36,7 @@ function drawFlowField() {
             // Use dynamic color
             stroke((value * 180 / PI) % 255, 100, 150);
 
-             // Draw curve instead of arrow (source chatgpt)
+            // Draw curve instead of arrow (source chatgpt)
             for (let i = 0; i < 25; i++) {
                 const offset = i * 5;
                 beginShape();
@@ -57,6 +59,50 @@ function drawFlowField() {
     }
 }
 
+// Second flow field with different behavior
+function drawFlowField2() {
+    // (source garrit lecture slide example)
+    const fieldSize = 50; 
+    const fieldSizeHalf = fieldSize / 2;
+    const maxCols = Math.ceil(width / fieldSize);
+    const maxRows = Math.ceil(height / fieldSize);
+    const divider = 3;  // Different divider for the second flow field to alter noise pattern
+  
+    for (let x = 0; x < maxCols; x++) {
+        for (let y = 0; y < maxRows; y++) {
+            const padding = 5;
+            const value = noise((x + 100) / divider, (y + 100) / divider) * Math.PI * 2; // Slightly offset noise
+            const curveLength = fieldSizeHalf - padding; 
+            push();
+            translate(x * fieldSize + fieldSizeHalf, y * fieldSize + fieldSizeHalf);
+            rotate(value + HALF_PI); // Different rotation angle
+            strokeWeight(2);
+            
+            // Use a different color for this second flow field
+            stroke((value * 180 / PI + 100) % 255, 150, 100);
+
+            // Draw curve for the second field (source chatgpt)
+            for (let i = 0; i < 15; i++) { // Fewer curves to make this field less dense
+                const offset = i * 5;
+                beginShape();
+                const startX = -curveLength + offset;
+                const startY = 0;
+                const controlX1 = -curveLength / 2 + offset;
+                const controlY1 = random(-curveLength, curveLength); 
+                const controlX2 = curveLength / 2 + offset;
+                const controlY2 = random(-curveLength, curveLength); 
+                const endX = curveLength + offset;
+                const endY = 0;
+        
+                bezier(startX, startY, controlX1, controlY1, controlX2, controlY2, endX, endY);
+        
+                endShape();
+            }
+            pop();
+        }
+    }
+}
+
 // Draw white background for the circular grid
 function drawGridBackground() {
     const centerX = width / 2;
@@ -68,8 +114,8 @@ function drawGridBackground() {
     ellipse(centerX, centerY, gridRadius * 2); 
 }
 
+// draw interactive racteangles (source chatgpt)
 function drawInteractiveRectangles() {
-    // (source chatgpt)
     const centerX = width / 2;
     const centerY = height / 2;
     const circleRadius = 250; 
@@ -116,6 +162,7 @@ function drawInteractiveRectangles() {
     }
 }
 
+// Mouse click event to toggle interactive mode
 function mousePressed() {
     mouseInteraction = !mouseInteraction;
     if (mouseInteraction) {
